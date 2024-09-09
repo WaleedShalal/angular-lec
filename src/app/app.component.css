@@ -1,0 +1,16 @@
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.text-success {
+  color: green;
+  background-color: red;
+}
+
+.buttonStyle {
+  width: 50%;
+  background-color: beige;
+  color: blue;
+}
