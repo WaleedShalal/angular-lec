@@ -3,11 +3,18 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TheFooterComponent } from './the-footer/the-footer.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @Component({
   selector: 'app-root', // tag name
   standalone: true,
-  imports: [RouterOutlet, CommonModule, NavbarComponent, TheFooterComponent],
+  imports: [
+    RouterOutlet,
+    CommonModule,
+    NavbarComponent,
+    TheFooterComponent,
+    ProductListComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

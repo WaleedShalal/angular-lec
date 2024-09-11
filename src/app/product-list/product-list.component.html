@@ -1,0 +1,11 @@
+<div class="product-list">
+  <h1>Product List Page</h1>
+
+  <div *ngFor="let product of products">
+    <app-product-item
+      [product]="product"
+      (sendProductId)="getChildProductId($event)"
+      (sendChildName)="getChildName($event)"
+    />
+  </div>
+</div>

@@ -1,5 +1,5 @@
 <div class="app">
-  <h1 [ngStyle]="{ color: isRed ? 'red' : 'blue' }">{{ title }}</h1>
+  <!-- <h1 [ngStyle]="{ color: isRed ? 'red' : 'blue' }">{{ title }}</h1>
   <p>{{ description }}</p>
   <div>{{ 1 + 100 }}</div>
   <img [src]="imagePath" alt="" />
@@ -9,22 +9,24 @@
     [ngClass]="{ buttonStyle: isRed }"
   >
     click button
-  </button>
+  </button> -->
   <app-navbar />
   <main>
-    <button (click)="handleShowFooter()">handle show footer button</button>
-    <ul>
-      <li *ngFor="let num of myNumbers; let i = index">{{ num }} -{{ i }}</li>
-    </ul>
-    <div [ngSwitch]="myFavDay">
+    <!-- <button (click)="handleShowFooter()">handle show footer button</button> -->
+    <!-- <ul> -->
+    <!-- @for (num of myNumbers; track $index) {
+      <li>{{ num }}</li>
+      } -->
+    <!-- <li *ngFor="let num of myNumbers; let i = index">{{ num }} -{{ i }}</li> -->
+    <!-- </ul> -->
+    <!-- <div [ngSwitch]="myFavDay">
       <p *ngSwitchCase="'SAT'">SAT Case</p>
       <p *ngSwitchCase="'FRI'">FRI Case</p>
       <p *ngSwitchDefault>Default Case</p>
-    </div>
+    </div> -->
+    <router-outlet />
   </main>
   <div *ngIf="showFooter">
     <app-the-footer />
   </div>
 </div>
-
-<router-outlet />
