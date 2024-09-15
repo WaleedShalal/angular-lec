@@ -1,0 +1,36 @@
+<div class="register-page">
+  <h1 class="text-center">Register page</h1>
+  <div class="container">
+    <form
+      [formGroup]="userInfoWithFormBuilder"
+      class="d-flex flex-column justify-content-center align-items-center"
+      (ngSubmit)="onSubmit()"
+    >
+      <div>
+        <label for="userName">user name</label>
+        <input
+          type="text"
+          id="userName"
+          name="userName"
+          formControlName="userName"
+        />
+      </div>
+      <!-- @if(userNameErrors){
+      <p>user name error</p>
+      } -->
+      <div>
+        <label for="userEmail">user email</label>
+        <input
+          type="email"
+          id="userEmail"
+          name="userEmail"
+          formControlName="userEmail"
+        />
+      </div>
+
+      <button class="btn btn-secondary" [disabled]="!userInfoForm.valid">
+        submit
+      </button>
+    </form>
+  </div>
+</div>

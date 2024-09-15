@@ -1,0 +1,43 @@
+<div class="login-page">
+  <div class="container">
+    <form
+      #userInfo="ngForm"
+      (ngSubmit)="submitUserInfo(userInfo)"
+      class="d-flex flex-column justify-content-center align-items-center"
+    >
+      <div>
+        <label for="userName">user name</label>
+        <input
+          type="text"
+          id="userName"
+          name="userName"
+          #userName="ngModel"
+          required
+          minlength="10"
+          ngModel
+        />
+        <!-- @if(userName.touched){
+        <p>username touched</p>
+        } -->
+        @if(userInfo.form.invalid && userName.touched && userEmail.touched){
+        <p>username Errors</p>
+        }
+      </div>
+      <div>
+        <label for="userEmail">user email</label>
+        <input
+          type="email"
+          id="userEmail"
+          name="userEmail"
+          #userEmail="ngModel"
+          ngModel
+        />
+        <!-- @if(userEmail.touched && userEmail){
+        <p>userEmail touched</p>
+        } -->
+      </div>
+
+      <button class="btn btn-primary">submit</button>
+    </form>
+  </div>
+</div>
