@@ -1,0 +1,40 @@
+<div class="login-page-2 h-100">
+  <form
+    #userFormData="ngForm"
+    (ngSubmit)="getFormData(userFormData)"
+    class="d-flex flex-column align-items-center justify-content-center h-100"
+  >
+    <div class="form-group my-3">
+      <label for="username">username: </label>
+      <input
+        type="text"
+        id="username"
+        name="userName"
+        #userName="ngModel"
+        ngModel
+        required
+        minlength="7"
+      />
+      @if(userName.touched && userName.dirty && userEmail.touched &&
+      userEmail.dirty){
+      <p class="text-danger">this field is required</p>
+      }
+    </div>
+    <div class="form-group my-3">
+      <label for="useremail">useremail: </label>
+      <input
+        type="email"
+        id="useremail"
+        name="userEmail"
+        #userEmail="ngModel"
+        required
+        ngModel
+      />
+      @if(userName.touched && userName.dirty && userEmail.touched){
+      <p class="text-danger">this field is required</p>
+      }
+    </div>
+
+    <button class="btn btn-primary my-2">submit</button>
+  </form>
+</div>

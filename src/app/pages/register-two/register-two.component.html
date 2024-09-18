@@ -1,0 +1,41 @@
+<div class="register-page-2 h-100">
+  <form
+    [formGroup]="userRegisterDataWithFormBuilder"
+    (ngSubmit)="handleSubmitWithFormBuilder()"
+    class="d-flex flex-column align-items-center justify-content-center h-100"
+  >
+    <div class="form-group my-3">
+      <label for="username">username: </label>
+      <input
+        type="text"
+        id="username"
+        name="userName"
+        formControlName="userName"
+      />
+    </div>
+    <div class="form-group my-3">
+      <label for="useremail">useremail: </label>
+      <input
+        type="email"
+        id="useremail"
+        name="userEmail"
+        formControlName="userEmail"
+      />
+    </div>
+    <div class="form-group my-3">
+      <label for="userpassword">userpassword: </label>
+      <input
+        type="password"
+        id="userpassword"
+        name="userPassword"
+        formControlName="userPassword"
+      />
+    </div>
+
+    <div *ngIf="userNameErrors" class="error">
+      {{ userNameErrors }}
+    </div>
+
+    <button class="btn btn-primary my-2">submit</button>
+  </form>
+</div>

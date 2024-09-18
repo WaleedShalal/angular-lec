@@ -10,6 +10,9 @@ import { PostsComponent } from './pages/posts/posts.component';
 import { PostsNewsComponent } from './components/posts-news/posts-news.component';
 import { PostsVideosComponent } from './components/posts-videos/posts-videos.component';
 import { PostInfoComponent } from './pages/post-info/post-info.component';
+import { LoginTwoComponent } from './pages/login-two/login-two.component';
+import { RegisterTwoComponent } from './pages/register-two/register-two.component';
+import { HamadaComponent } from './pages/hamada/hamada.component';
 
 export const routes: Routes = [
   {
@@ -57,8 +60,20 @@ export const routes: Routes = [
     ],
   },
   {
+    path: 'login2',
+    component: LoginTwoComponent,
+  },
+  {
+    path: 'register2',
+    component: RegisterTwoComponent,
+  },
+  {
     path: 'posts/:id',
     component: PostInfoComponent,
+  },
+  {
+    path: 'hamada',
+    component: HamadaComponent,
   },
   {
     path: '**',
