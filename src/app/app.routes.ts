@@ -6,6 +6,10 @@ import { ProductOverviewComponent } from './components/product-overview/product-
 import { ProductTitlesComponent } from './components/product-titles/product-titles.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { PostsComponent } from './pages/posts/posts.component';
+import { PostsNewsComponent } from './components/posts-news/posts-news.component';
+import { PostsVideosComponent } from './components/posts-videos/posts-videos.component';
+import { PostInfoComponent } from './pages/post-info/post-info.component';
 
 export const routes: Routes = [
   {
@@ -37,6 +41,24 @@ export const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
+  },
+  {
+    path: 'posts',
+    component: PostsComponent,
+    children: [
+      {
+        path: 'news',
+        component: PostsNewsComponent,
+      },
+      {
+        path: 'videos',
+        component: PostsVideosComponent,
+      },
+    ],
+  },
+  {
+    path: 'posts/:id',
+    component: PostInfoComponent,
   },
   {
     path: '**',
